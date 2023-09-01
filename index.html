@@ -4,59 +4,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style/style.css" />
 </head>
 
 <body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
+  <main>
+    <section class="hero" id="js-hero">
+      <div class="hero-image"></div>
+      <div class="hero-container container">
+        <div class="hero-description">
+          <h1 class="hero-title-1">Stay updated!</h1>
+          <p class="hero-paragraph">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="hero-list">
+            <li class="list-item list"><img src="/assets/images/icon-list.svg" alt="list">
+              <p class="list-paragraph">Product discovery and building what matters</p>
+            </li>
+            <li class="list-item list"><img src="/assets/images/icon-list.svg" alt="list">
+              <p class="list-paragraph">Measuring to ensure updates are a success</p>
+            </li>
+            <li class="list-item list"><img src="/assets/images/icon-list.svg" alt="list">
+              <p class="list-paragraph">And much more!</p>
+            </li>
+          </ul>
+          <form action="" class="hero-form">
+            <label class="hero-form-label">Email address</label>
+            <label class="error-message" id="error-message">Please write correct e-mail.</label>
+            <input type="email" class="hero-form-input" name="subscribe" id="subscribe" placeholder="email@company.com"
+              required>
+            <button type="submit" class="hero-form-button" data-modal-open>Subscribe to monthly
+              newsletter</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Success message start -->
+  <div class="backdrop" data-modal>
+    <div class="modal-window container">
+      <img src="/assets/images/icon-success.svg" alt="list" class="modal-img">
+      <h2 class="modal-title">Thanks for subscribing!</h2>
+      <p class="modal-paragraph">A confirmation email has been sent to <a href="mailto:ash@loremcompany.com"
+          class="link">ash@loremcompany.com</a>.
+        Please open it and click the button inside to confirm your subscription.</p>
+      <button type="submit" class="modal-button" data-modal-close>Dismiss message</button>
+    </div>
+  </div>
 
-  Thanks for subscribing!
 
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-
+  <!-- Developer info -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Haber Serhii</a>.
+    Coded by <a href="#"> Haber Serhii</a>.
   </div>
+  <script src="./js/modal.js"></script>
 </body>
+
 
 </html>

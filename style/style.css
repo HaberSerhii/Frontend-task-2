@@ -1,0 +1,269 @@
+@import url("/style/fonts.css");
+
+:root {
+  --roboto: "Roboto", sans-serif;
+  --roboto-bold: "Roboto-bold", sans-serif;
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsla(235, 18%, 26%, 90%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* BASE STYLE >>>>>> > > > START < < < <<<<<< */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.link {
+  margin: 0;
+  text-decoration: none;
+}
+
+.hidden-outline {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* BASE STYLE >>>>>> > > > END  < < < <<<<<<< */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: var(--roboto);
+  color: var(--charcoal-grey);
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin: auto;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+main {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    max-width: 768px;
+    flex-direction: row-reverse;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    margin-bottom: 50px;
+  }
+  body {
+    background-color: var(--charcoal-grey);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-image {
+    background: url(/assets/images/illustration-sign-up-desktop.svg);
+    max-height: 600px;
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 25px;
+}
+
+/* HERO IMAGE */
+
+.hero-image {
+  min-width: 320px;
+  max-width: 375px;
+  height: 275px;
+  border-radius: 0 0 15px 15px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url(/assets/images/illustration-sign-up-mobile.svg);
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 375px) {
+  .hero-image {
+    min-width: 375px;
+  }
+}
+
+/* HERO TITLE */
+.hero-title-1 {
+  font-family: var(--roboto-bold);
+  font-size: 35px;
+}
+
+/* HERO LIST */
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 375px;
+}
+
+@media screen and (min-width: 376px) {
+  .hero-container {
+    padding: 0 50px;
+  }
+}
+
+.hero-paragraph {
+}
+.hero-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* HERO FORM */
+
+.hero-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-form-label {
+  font-family: var(--roboto-bold);
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+.hero-form-input {
+  min-width: 320px;
+  max-width: 375px;
+  padding: 15px 20px;
+  border: 1px solid hsl(231, 7%, 90%);
+  border-radius: 7px;
+  outline: none;
+  margin-bottom: 9px;
+}
+.hero-form-input:focus {
+  border-color: rgba(254, 135, 57, 1);
+}
+.hero-form-input::placeholder {
+  color: hsl(231, 7%, 70%);
+  font-size: 14px;
+}
+.hero-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  border: 0px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.55);
+}
+
+.hero-form-button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(254, 135, 57, 1) 0%,
+    rgba(247, 125, 125, 1) 100%
+  );
+}
+
+.attribution {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 10px;
+}
+/**
+  |============================
+  | MODAL OVERVIEW
+  |============================
+*/
+.modal-window {
+  padding: 120px 30px 30px 30px;
+}
+.modal-img {
+  margin-bottom: 40px;
+}
+.modal-title {
+  font-family: var(--roboto-bold);
+  color: var(--charcoal-grey);
+  font-size: 35px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.modal-paragraph {
+  color: hsla(235, 18%, 26%, 100%);
+  margin-bottom: 270px;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 315px;
+  padding: 20px 20px;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  border: 0px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.error-message {
+  position: absolute;
+  color: #fc5c49;
+  font-size: 14px;
+  top: -5px;
+  align-self: flex-end;
+}
+
+.error {
+  border: 1px solid #fc5c49;
+  background-color: #ff8c7f;
+}
+
+.error::placeholder {
+  color: var(--white);
+}
