@@ -53,7 +53,7 @@ img {
 body {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   font-family: var(--roboto);
   color: var(--charcoal-grey);
   font-size: 15px;
@@ -71,6 +71,16 @@ main {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  body {
+    background-color: var(--charcoal-grey);
+    align-items: center;
+  }
+  main {
+    background-color: var(--white);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .hero {
     max-width: 768px;
@@ -80,16 +90,20 @@ main {
     padding: 0;
     border: 1px solid transparent;
     border-radius: 25px;
-    margin-bottom: 50px;
   }
   body {
     background-color: var(--charcoal-grey);
+    align-items: center;
+  }
+  main {
+    margin: 85px auto 20px auto;
+    border-radius: 20px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .hero-image {
-    background: url(./assets/images/illustration-sign-up-desktop.svg);
+    background: url(/assets/images/illustration-sign-up-desktop.svg);
     max-height: 600px;
   }
 }
@@ -103,6 +117,19 @@ main {
   padding: 0 25px;
 }
 
+@media screen and (min-width: 376px) {
+  .hero-container {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    margin: 60px 20px 60px 40px;
+    padding: 0;
+  }
+}
+
 /* HERO IMAGE */
 
 .hero-image {
@@ -113,13 +140,25 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background: url(./assets/images/illustration-sign-up-mobile.svg);
+  background: url(/assets/images/illustration-sign-up-mobile.svg);
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 375px) {
   .hero-image {
     min-width: 375px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-image {
+    background: url(/assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    min-width: 320px;
+    max-width: 350px;
+    margin: 15px 25px 15px 10px;
+    border-radius: 15px;
   }
 }
 
@@ -138,9 +177,9 @@ main {
   max-width: 375px;
 }
 
-@media screen and (min-width: 376px) {
-  .hero-container {
-    padding: 0 50px;
+@media screen and (min-width: 768px) {
+  .hero-description {
+    padding: 0 30px;
   }
 }
 
@@ -181,6 +220,12 @@ main {
   outline: none;
   margin-bottom: 9px;
 }
+
+@media screen and (min-width: 768px) {
+  .hero-form-input {
+    margin-bottom: 20px;
+  }
+}
 .hero-form-input:focus {
   border-color: rgba(254, 135, 57, 1);
 }
@@ -207,6 +252,8 @@ main {
     rgba(254, 135, 57, 1) 0%,
     rgba(247, 125, 125, 1) 100%
   );
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .attribution {
@@ -214,15 +261,44 @@ main {
   flex-direction: row;
   justify-content: flex-end;
   font-size: 10px;
+  color: var(--grey);
 }
+
+.attribution a {
+  color: var(--grey);
+}
+.attribution a:hover {
+  color: rgba(254, 135, 57, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .attribution {
+    background-color: var(--white);
+    min-width: 475px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .attribution {
+    background-color: transparent;
+    color: var(--white);
+  }
+  .attribution a {
+    color: var(--white);
+  }
+}
+
 /**
   |============================
   | MODAL OVERVIEW
   |============================
 */
 .modal-window {
-  padding: 120px 30px 30px 30px;
+  padding: 80px 30px 20px 30px;
 }
+
 .modal-img {
   margin-bottom: 40px;
 }
@@ -249,6 +325,54 @@ main {
   border: 0px solid transparent;
   border-radius: 8px;
   font-size: 14px;
+}
+
+.modal-button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(254, 135, 57, 1) 0%,
+    rgba(247, 125, 125, 1) 100%
+  );
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    margin-top: 180px;
+  }
+  .modal-window {
+    background-color: var(--white);
+    padding: 40px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+  }
+
+  .modal-title {
+    margin-bottom: 25px;
+  }
+
+  .modal-paragraph {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+
+  .modal-img {
+    width: 45px;
+    margin-bottom: 25px;
+  }
+  .modal-link {
+    font-family: var(--roboto-bold);
+    color: var(--charcoal-grey);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .backdrop {
+    margin-top: 60px;
+  }
 }
 
 .error-message {
