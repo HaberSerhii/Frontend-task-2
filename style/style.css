@@ -89,7 +89,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   .hero-image {
-    background: url(/assets/images/illustration-sign-up-desktop.svg);
+    background: url(./assets/images/illustration-sign-up-desktop.svg);
     max-height: 600px;
   }
 }
@@ -113,7 +113,7 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background: url(/assets/images/illustration-sign-up-mobile.svg);
+  background: url(./assets/images/illustration-sign-up-mobile.svg);
   margin-bottom: 30px;
 }
 
